@@ -1,4 +1,4 @@
-"""Build a simple HTML page from merged data."""
+"""Build a richer info-style HTML posting from merged data or sample data."""
 import argparse
 from datetime import date
 from pathlib import Path
@@ -12,9 +12,15 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--region", required=True)
     parser.add_argument("--keyword", required=True)
+    parser.add_argument(
+        "--input",
+        dest="input_path",
+        default=None,
+        help="Optional input JSON path. If omitted, uses data/merged_{region}_{keyword}.json",
+    )
     args = parser.parse_args()
 
-    src = DATA_DIR / f"merged_{args.region}_{args.keyword}.json"
+    src = Path(args.input_path) if args.input_path else DATA_DIR / f"merged_{args.region}_{args.keyword}.json"
     places = load_json(src)
 
     env = Environment(
@@ -28,6 +34,7 @@ def main() -> None:
         keyword=args.keyword,
         places=places,
         updated_at=date.today().isoformat(),
+        data_basis=src.name,
     )
 
     out = ROOT / "output" / f"{args.region}_{args.keyword}.html"

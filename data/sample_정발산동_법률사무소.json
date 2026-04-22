@@ -1,0 +1,32 @@
+[
+  {
+    "name": "예시 법률사무소 A",
+    "address": "경기 고양시 일산동구 정발산동 123-4",
+    "phone": "031-000-0001",
+    "lat": 37.659,
+    "lng": 126.768,
+    "map_url": "https://map.naver.com/",
+    "sources": ["kakao", "naver"],
+    "confidence": 2
+  },
+  {
+    "name": "예시 법률사무소 B",
+    "address": "경기 고양시 일산동구 정발산동 45-7",
+    "phone": "031-000-0002",
+    "lat": 37.661,
+    "lng": 126.772,
+    "map_url": "https://www.google.com/maps",
+    "sources": ["google", "kakao", "naver"],
+    "confidence": 3
+  },
+  {
+    "name": "예시 법무법인 C",
+    "address": "경기 고양시 일산동구 정발산동 88-9",
+    "phone": null,
+    "lat": null,
+    "lng": null,
+    "map_url": null,
+    "sources": ["google"],
+    "confidence": 1
+  }
+]
