@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ region }} {{ keyword }} 완전가이드 | 절차·비용·체크리스트</title>
+  <meta name="description" content="{{ region }} {{ keyword }} 관련 절차, 비용, 준비서류, 지역 업체 정보까지 한 번에 확인하세요." />
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #fff;
+      --line: #e6e8ec;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --warn-bg: #fff7e6;
+      --warn-line: #f9d57a;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.65; }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px 16px 60px; }
+    .hero, .section, .notice { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 14px; }
+    h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.3; }
+    h2 { margin: 0 0 12px; font-size: 22px; }
+    h3 { margin: 0 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .toc a { color: var(--primary); text-decoration: none; }
+    .toc li { margin: 6px 0; }
+    .notice { background: var(--warn-bg); border-color: var(--warn-line); }
+    .grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: #fff; }
+    .badge { display: inline-block; font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #eef2ff; color: #1e3a8a; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--muted); margin: 4px 0; }
+    .btn { display: inline-block; margin-top: 8px; background: var(--primary); color: #fff; text-decoration: none; padding: 9px 12px; border-radius: 9px; font-weight: 600; }
+    ul { padding-left: 18px; margin: 10px 0; }
+    .faq-item { border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 10px; }
+    footer { margin-top: 20px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <p class="badge">정보성 포스팅</p>
+      <h1>{{ region }} {{ keyword }} 완전가이드</h1>
+      <p class="muted">최종 업데이트: {{ updated_at }} · 데이터 기준: {{ data_basis }}</p>
+      <p>
+        이 글은 {{ region }}에서 {{ keyword }}를 찾는 분을 위해 절차, 비용 범위, 준비사항과 함께
+        지역 정보까지 정리한 안내문입니다.
+      </p>
+    </section>
+
+    <section class="notice">
+      <strong>광고/제휴 고지:</strong>
+      본 문서에는 제휴 링크가 포함될 수 있으며, 링크를 통해 상담/신청 시 수수료를 받을 수 있습니다.
+      다만, 정보 제공의 객관성을 우선으로 작성했습니다.
+    </section>
+
+    <section class="section toc" id="toc">
+      <h2>목차</h2>
+      <ol>
+        <li><a href="#overview">핵심 요약</a></li>
+        <li><a href="#process">진행 절차</a></li>
+        <li><a href="#cost">비용/기간 가이드</a></li>
+        <li><a href="#checklist">준비 체크리스트</a></li>
+        <li><a href="#local">{{ region }} 업체 정보</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+      </ol>
+    </section>
+
+    <section class="section" id="overview">
+      <h2>1) 핵심 요약</h2>
+      <ul>
+        <li>개별 사안에 따라 가능 여부/기간/비용은 달라집니다.</li>
+        <li>초기 상담에서는 소득, 채무, 재산, 최근 금융거래 내역이 가장 중요합니다.</li>
+        <li>업체 선택 시에는 접근성보다도 전문분야, 상담 품질, 설명 투명성을 먼저 확인하세요.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="process">
+      <h2>2) 진행 절차</h2>
+      <ol>
+        <li>사전 진단: 현재 상황 정리(수입·지출·채무 현황).</li>
+        <li>서류 준비: 소득 증빙, 채무 내역, 재산 관련 자료.</li>
+        <li>전문가 상담: 가능성·리스크·총비용 범위 확인.</li>
+        <li>접수/심사: 관할 절차 진행 및 보정 대응.</li>
+        <li>사후 관리: 납부 일정·변동사항 관리.</li>
+      </ol>
+    </section>
+
+    <section class="section" id="cost">
+      <h2>3) 비용/기간 가이드</h2>
+      <p>
+        아래는 일반적인 참고 범위이며, 실제 금액과 기간은 사건 난이도·채권자 수·자료 상태에 따라 달라질 수 있습니다.
+      </p>
+      <ul>
+        <li>초기 상담: 무료~유료(업체별 상이)</li>
+        <li>서류 정리/진행 수수료: 사안별 상이</li>
+        <li>진행 기간: 관할 기관 및 보정 여부에 따라 변동</li>
+      </ul>
+    </section>
+
+    <section class="section" id="checklist">
+      <h2>4) 준비 체크리스트</h2>
+      <ul>
+        <li>최근 3~6개월 수입/지출 내역</li>
+        <li>채권사별 채무 목록(원금/이자/연체 여부)</li>
+        <li>재산 보유 현황(부동산/차량/예금/보험)</li>
+        <li>가족 구성 및 부양 관련 자료</li>
+      </ul>
+    </section>
+
+    <section class="section" id="local">
+      <h2>5) {{ region }} {{ keyword }} 관련 업체 정보</h2>
+      <div class="grid">
+        {% for p in places %}
+        <article class="card">
+          <p class="badge">{{ p.confidence }}개 소스 일치</p>
+          <h3>{{ p.name }}</h3>
+          <p class="meta">주소: {{ p.address or '-' }}</p>
+          <p class="meta">전화: {{ p.phone or '-' }}</p>
+          <p class="meta">출처: {{ ', '.join(p.sources) if p.sources else '-' }}</p>
+          {% if p.map_url %}
+          <a class="btn" href="{{ p.map_url }}" target="_blank" rel="noopener">지도 확인</a>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>6) 자주 묻는 질문</h2>
+      <div class="faq-item">
+        <strong>Q. 꼭 방문 상담을 해야 하나요?</strong>
+        <p>상황에 따라 전화/온라인으로 1차 확인이 가능하지만, 최종 판단은 개별 자료 검토가 필요합니다.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Q. 무조건 승인/인가가 되나요?</strong>
+        <p>아니요. 요건 충족 여부와 제출 자료의 충실도에 따라 결과가 달라질 수 있습니다.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Q. 가장 먼저 준비할 건 뭔가요?</strong>
+        <p>채무 목록과 월별 현금흐름 자료를 먼저 정리하면 상담 품질이 크게 좋아집니다.</p>
+      </div>
+    </section>
+
+    <footer>
+      본 문서는 일반 정보 제공용이며 법률/세무/의료 등 전문 자문을 대체하지 않습니다.
+    </footer>
+  </main>
+</body>
+</html>
